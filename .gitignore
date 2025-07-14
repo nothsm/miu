@@ -1,0 +1,66 @@
+# OCaml compiled files
+*.cmo
+*.cmi
+*.cma
+*.cmx
+*.cmxa
+*.cmxs
+*.o
+*.a
+*.so
+*.dylib
+
+# OCaml bytecode
+*.byte
+
+# OCaml native code
+*.native
+*.opt
+
+# Build directories
+_build/
+_obuild/
+
+# Dune build files
+.install
+*.install
+_build/
+dune-project.dev
+
+# OPAM files
+*.opam.locked
+_opam/
+
+# Merlin (OCaml IDE support)
+.merlin
+.merlin-conf
+
+# utop
+.utop-history
+
+# OCaml documentation
+*.html
+*.css
+doc/
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~
+\#*\#
+.#*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
