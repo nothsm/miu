@@ -9,13 +9,13 @@ the program is written in written in ocaml and is built with dune.
 first, install ocaml + dune on your computer.
 
 then, the following command will run `miu` for a search depth of `2`:
-``` shell
+```
 dune exec miu 2
 ```
 then, type in a string consisting consisting of the letters `M`, `I` or `U`
 and press enter to see what strings `miu` generates. for example,
 
-``` shell
+``` 
 $ dune exec miu 2
 $ MI
 MI
