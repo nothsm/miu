@@ -32,6 +32,7 @@ let symbols_of_string s =
 let string_of_symbols ss =
   string_of_chars (map char_of_symbol ss)
 
+(* xI => xU *)
 let r1 cs =
   assert (not (is_empty cs));
   match rev cs with
@@ -39,6 +40,7 @@ let r1 cs =
   | I::cs -> [rev (U::I::cs)]
   | c::cs -> []
 
+(* Mx => Mxx *)
 let r2 cs =
   assert (not (is_empty cs));
   match cs with
@@ -46,6 +48,7 @@ let r2 cs =
   | M::cs -> [M::(cs @ cs)]
   | c::cs -> []
 
+(* xIIIy -> xUy *)
 let rec r3 cs =
   assert (not (is_empty cs));
   match cs with
@@ -59,6 +62,7 @@ let rec r3 cs =
       end
   | c::cs -> map (fun cs' -> c::cs') (r3 cs)
 
+(* xUUUy -> xUy *)
 let rec r4 (cs:symbol list) : symbol list list =
   assert (not (is_empty cs));
   match cs with
