@@ -1,0 +1,5 @@
+(executable
+ (public_name miu)
+ (name main)
+ (libraries miu)
+ (flags (:standard -warn-error -a)))
