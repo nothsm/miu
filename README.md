@@ -6,9 +6,9 @@ miu implements the MIU formal system from "Gödel, Escher, Bach" (https://en.wik
 
 the program is written in written in ocaml and is built with dune. 
 
-first, install ocaml + dune on your computer 
+first, install ocaml + dune on your computer.
 
-then, the following command will run `miu` for a search depth of `3`:
+then, the following command will run `miu` for a search depth of `2`:
 ``` shell
 dune exec miu 2
 ```
