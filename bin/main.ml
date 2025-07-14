@@ -1,9 +1,6 @@
 open List
-open Printf
 
 type symbol = M | I | U
-
-let symbols = ['M'; 'I'; 'U']
 
 let error s =
   raise (Failure s)
@@ -76,8 +73,10 @@ let rec r4 (cs:symbol list) : symbol list list =
       end
   | c::cs -> map (fun cs' -> c::cs') (r4 cs)
 
+let rs = [r1; r2; r3; r4]
+
 let infer cs : symbol list list =
-  concat_map (fun f -> f cs) [r1; r2; r3; r4]
+  concat_map (fun f -> f cs) rs
 
 (* TODO: when should I dedup? *)
 let rec search depth cs : symbol list list =
